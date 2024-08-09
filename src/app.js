@@ -10,28 +10,28 @@ window.onload = () => {
   console.log("Hello Rigo from the console!");
 };
 
+function arrayIndexRandom(arr) {
+  let index = Math.floor(Math.random() * arr.length);
+  console.log(arr);
+  console.log(arr[index]);
+  return arr[index];
+}
+
 let generateExcuse = () => {
   let pronoun = ["A", "The"];
   let subject = ["joger", "racoon", "dog", "driver", "comedian", "pincone"];
   let action = ["took my", "threw my", "yellerd at my", "stole my", "bit my"];
   let posetion = ["homework", "toe", "car", "shoe"];
   let where = ["on the street", "in my house", "in my driveway"];
-
-  let proIndx = Math.floor(Math.random() * pronoun.length);
-  let subjIndx = Math.floor(Math.random() * subject.length);
-  let actionIndex = Math.floor(Math.random() * action.length);
-  let posetionIndex = Math.floor(Math.random() * posetion.length);
-  let whereIndex = Math.floor(Math.random() * where.length);
-
   return (
-    pronoun[proIndx] +
+    `${arrayIndexRandom(pronoun)}` +
     " " +
-    subject[subjIndx] +
+    `${arrayIndexRandom(subject)}` +
     " " +
-    action[actionIndex] +
+    `${arrayIndexRandom(action)}` +
     " " +
-    posetion[posetionIndex] +
+    `${arrayIndexRandom(posetion)}` +
     " " +
-    where[whereIndex]
+    `${arrayIndexRandom(where)}`
   );
 };
